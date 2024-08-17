@@ -2,32 +2,72 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  box-sizing: border-box;
+}
+
+.dark {
+  --background: #000319;
+  --text-primary: #ffffff;
+  --text-secondary: #d1acff;
+  --border-primary: #1b2040;
+
+  background-color: var(--background);
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.bg_gradient {
+  background: linear-gradient(103.4deg, #04071d 16.66%, #0c0e23 81.61%);
+}
+
+.btn_gradient {
+  background: linear-gradient(90deg, #161a31 3.4%, #06091f 100%);
+}
+
+.about_card-text {
+  @apply font-bold text-primary text-lg md:text-xl lg:text-2xl;
+}
+
+.glass:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0 0 150px rgba(65, 64, 64, 0.5);
+  filter: blur(3px);
+}
+
+.section_heading {
+  @apply font-bold text-3xl md:text-3xl lg:text-4xl xl:text-5xl text-primary mb-8 sm:mb-8 md:mb-10 lg:mb-12;
+}
+
+.project-card_title {
+  @apply font-bold text-xl lg:text-2xl xl:text-3xl text-primary;
+}
+
+.project-card_description {
+  @apply text-primary font-extralight text-base md:text-lg line-clamp-3;
+}
+
+.project-card_link {
+  @apply text-secondary font-light text-base md:text-lg lg:text-xl;
+}
+
+.tech_bg {
+  background: linear-gradient(103.4deg, #04071d 16.66%, #0c0e23 81.61%);
+}
+
+.grid_bg {
+  background-image: url(/assets/pattern.png);
 }
