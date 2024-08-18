@@ -16,7 +16,26 @@ const ExperienceSection = () => {
           <span className="text-secondary"> experience</span>
         </motion.h2>
 
-        <div className="min-h-52 py-8 px-10 max-w-3xl mx-auto border-2 border-primary rounded-xl flex flex-wrap w-full items-center gap-10">
+        <motion.div
+          initial={{ y: 40 }}
+          whileInView={{
+            y: 0,
+            transition: {
+              duration: 0.5,
+              type: "spring",
+              // stiffness: 300,
+            },
+          }}
+          whileHover={{
+            y: -10,
+            transition: {
+              duration: 0.5,
+              type: "spring",
+              stiffness: 300,
+            },
+          }}
+          className="cursor-pointer min-h-52 py-8 px-10 max-w-3xl mx-auto border-2 border-primary rounded-xl flex flex-wrap w-full items-center gap-10"
+        >
           <div className="w-full md:w-1/4 flex justify-center items-center">
             <Image
               src={`/assets/developer.svg`}
@@ -47,7 +66,7 @@ const ExperienceSection = () => {
               </li>
             </ul>
           </div>
-        </div>
+        </motion.div>
       </Container>
     </Section>
   );

@@ -13,9 +13,17 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
     // relative glass px-6 py-9 rounded-xl border-2 border-primary
     <motion.div
       className="h-full"
-      initial={{ scale: 1 }}
+      initial={{ y: 40 }}
+      whileInView={{
+        y: 0,
+        transition: {
+          duration: 0.5,
+          type: "spring",
+          // stiffness: 300,
+        },
+      }}
       whileHover={{
-        scale: 1.02,
+        y: -10,
         transition: {
           duration: 0.5,
           type: "spring",

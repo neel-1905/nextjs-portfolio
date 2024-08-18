@@ -6,11 +6,12 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export const fadeAnimation = {
-  initial: { opacity: 0 },
+  initial: { opacity: 0, y: 40 },
   whileInView: {
     opacity: 1,
+    y: 0,
     transition: {
-      duration: 1,
+      duration: 0.5,
     },
   },
 };

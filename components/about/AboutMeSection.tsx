@@ -7,6 +7,7 @@ import AboutCardText from "./AboutCardText";
 import { motion } from "framer-motion";
 import AnimatedButton from "../AnimatedButton";
 import { techStack } from "@/constants";
+import { fadeAnimation } from "@/lib/utils";
 
 const AboutMeSection = () => {
   return (
@@ -14,11 +15,12 @@ const AboutMeSection = () => {
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           <motion.div
-            initial={{ opacity: 0 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{
               opacity: 1,
+              y: 0,
               transition: {
-                duration: 1,
+                duration: 0.5,
               },
             }}
             whileHover="hover"
@@ -38,11 +40,12 @@ const AboutMeSection = () => {
 
           <div className="flex flex-col gap-6">
             <motion.div
-              initial={{ opacity: 0 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{
                 opacity: 1,
+                y: 0,
                 transition: {
-                  duration: 1,
+                  duration: 0.5,
                 },
               }}
               whileHover={"hover"}
@@ -61,11 +64,12 @@ const AboutMeSection = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{
                 opacity: 1,
+                y: 0,
                 transition: {
-                  duration: 1,
+                  duration: 0.5,
                 },
               }}
               whileHover={"hover"}
@@ -88,11 +92,12 @@ const AboutMeSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
           <motion.div
-            initial={{ opacity: 0 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{
               opacity: 1,
+              y: 0,
               transition: {
-                duration: 1,
+                duration: 0.5,
               },
             }}
             whileHover="hover"
@@ -112,11 +117,12 @@ const AboutMeSection = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{
               opacity: 1,
+              y: 0,
               transition: {
-                duration: 1,
+                duration: 0.5,
               },
             }}
             whileHover="hover"
@@ -124,24 +130,11 @@ const AboutMeSection = () => {
           >
             <div className="">
               <motion.h2
-                initial={{ x: 0 }}
-                variants={{
-                  hover: {
-                    x: 20,
-                    transition: { type: "spring", stiffness: 300 },
-                  },
-                }}
+                {...fadeAnimation}
                 className={`about_card-text text-center lg:text-left text-primary`}
               >
                 My Skill Set
               </motion.h2>
-              {/* <Image
-                src={`/assets/about4.png`}
-                height={500}
-                width={250}
-                alt="Contact Bg"
-                className="object-cover"
-              /> */}
             </div>
 
             <div className="text-primary grid grid-cols-2 gap-2 mx-auto md:ml-auto w-max">
