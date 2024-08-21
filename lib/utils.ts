@@ -6,7 +6,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export const fadeAnimation = {
-  initial: { opacity: 0, y: 40 },
+  initial: { opacity: 0, y: 50 },
   whileInView: {
     opacity: 1,
     y: 0,

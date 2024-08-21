@@ -95,6 +95,45 @@ export const projectsData = [
     ],
     link: "https://aspectsports.in/",
   },
+  {
+    title: "Fantom Play",
+    thumbnail: "/assets/projects/fantom.jpeg",
+    description:
+      "An admin panel developed for the purpose of managing the mobile application Fantom Play, which is a fantasy gaming platform.",
+    techStack: [
+      { name: "React.js", icon: "/assets/tech/react.svg" },
+      { name: "Next.js", icon: "/assets/tech/next.svg" },
+      { name: "Typescript", icon: "/assets/tech/ts.svg" },
+      { name: "Tailwind CSS", icon: "/assets/tech/tailwind.svg" },
+      { name: "Redux Toolkit", icons: "/assets/tech/redux-toolkit.svg" },
+    ],
+    link: "https://admin-dev.fantomplay.com/login",
+  },
+  {
+    title: "Article Summarizer",
+    thumbnail: "/assets/projects/ai-summarizer.jpeg",
+    description:
+      "This project shows my ability to implement simple AI APIs in a basic React.js application",
+    techStack: [
+      { name: "React.js", icon: "/assets/tech/react.svg" },
+      { name: "Typescript", icon: "/assets/tech/ts.svg" },
+      { name: "Tailwind CSS", icon: "/assets/tech/tailwind.svg" },
+    ],
+    link: "https://rapid-ai-summarizer.vercel.app/",
+  },
+  {
+    title: "Car Search App",
+    thumbnail: "/assets/projects/cars.jpeg",
+    description:
+      "A simple car display application which has parameters based filters for filtering cars built using Next.js and Rapid API.",
+    techStack: [
+      { name: "React.js", icon: "/assets/tech/react.svg" },
+      { name: "Next.js", icon: "/assets/tech/next.svg" },
+      { name: "Typescript", icon: "/assets/tech/ts.svg" },
+      { name: "Tailwind CSS", icon: "/assets/tech/tailwind.svg" },
+    ],
+    link: "https://nextjs-cars-ten.vercel.app/",
+  },
 ];
 
 export const socialMedia = [

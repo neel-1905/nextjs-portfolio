@@ -42,7 +42,7 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
           },
         }}
       >
-        <div className="px-8  bg-[#13162D] rounded-xl overflow-hidden max-h-80">
+        <div className="px-8 bg-[#13162D] rounded-xl overflow-hidden max-h-80 h-72">
           <Image
             src={project.thumbnail}
             width={450}
